@@ -1,9 +1,9 @@
-import Jimp from 'jimp';
 import { httpServer } from './src/http_server/index.js';
 import robot from 'robotjs';
 import { WebSocketServer } from 'ws';
-import { mouseCommands } from './src/Utils/mouseCommands.js';
-import { drawCommands } from './src/Utils/drawCommands.js';
+import { mouseCommands } from './src/utils/mouseCommands.js';
+import { drawCommands } from './src/utils/drawCommands.js';
+import { printScreen } from './src/utils/print.js'
 
 const HTTP_PORT = 3000;
 
@@ -29,6 +29,8 @@ wss.on('connection', (ws) => {
         } else if (command.startsWith('draw_')) {
             ws.send(command);
             drawCommands(command, params);
+        } else if (command.startsWith('prnt_')) {
+            printScreen(ws);
         }
     });
 })
