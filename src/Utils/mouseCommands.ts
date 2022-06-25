@@ -1,4 +1,7 @@
-import robot from 'robotjs';
+import { moveMouseUp } from './moveMouseUp';
+import { moveMouseDown } from './moveMouseDown';
+import { moveMouseLeft } from './moveMouseLeft';
+import { moveMouseRight } from './moveMouseRight';
 
 export const mouseCommands = (command: string, params: string[]) => {
 
@@ -17,24 +20,3 @@ export const mouseCommands = (command: string, params: string[]) => {
             break;
      }
 }
-
-const moveMouseUp = (distance: string): void => {
-    const { x, y } = robot.getMousePos();
-    robot.moveMouse(x, y - +distance);
-}
-
-const moveMouseDown = (distance: string): void => {
-    const { x, y } = robot.getMousePos();
-    robot.moveMouse(x, y + +distance);
-}
-
-const moveMouseLeft = (distance: string): void => {
-    const { x, y } = robot.getMousePos();
-    robot.moveMouse(x - +distance, y);
-}
-
-const moveMouseRight = (distance: string): void => {
-    const { x, y } = robot.getMousePos();
-    robot.moveMouse(x + +distance, y);
-}
-
