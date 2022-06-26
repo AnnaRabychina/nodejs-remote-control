@@ -1,7 +1,7 @@
-import { moveMouseUp } from './moveMouseUp';
-import { moveMouseDown } from './moveMouseDown';
-import { moveMouseLeft } from './moveMouseLeft';
-import { moveMouseRight } from './moveMouseRight';
+import { moveMouseUp } from './moveMouseUp.js';
+import { moveMouseDown } from './moveMouseDown.js';
+import { moveMouseLeft } from './moveMouseLeft.js';
+import { moveMouseRight } from './moveMouseRight.js';
 
 export const mouseCommands = (command: string, params: string[]) => {
 

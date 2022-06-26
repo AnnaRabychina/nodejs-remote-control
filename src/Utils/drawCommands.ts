@@ -1,5 +1,5 @@
-import { drawCircle } from './drawCircle';
-import { drawRectangle } from './drawRectangle';
+import { drawCircle } from './drawCircle.js';
+import { drawRectangle } from './drawRectangle.js';
 
 export const drawCommands = (command: string, params: string[]) => {
 
